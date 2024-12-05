@@ -87,7 +87,7 @@ install-backend:
 	$(PIP_BIN) install -r requirements/requirements.in
 .PHONY: install-backend
 
-install: venv install-backend
+install: venv install-backend migrate superuser
 .PHONY: install
 
 migrations:

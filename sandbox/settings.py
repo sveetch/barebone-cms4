@@ -232,3 +232,10 @@ INTERNAL_IPS = [
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = str(BASE_DIR.parent / "media")
+
+
+# Import optional local settings for local overriding
+try:
+    from .local_settings import *  # noqa: F401,F403
+except ImportError:
+    pass
